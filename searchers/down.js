@@ -5,8 +5,6 @@ module.exports = (graph, searchString) => {
     var offset =  searchSize - 1
     for (var rowCounter = offset; rowCounter < height; rowCounter++) {
         for (var colLeftCount = 0; colLeftCount < width; colLeftCount++) {
-            var ok = false;
-            var hasFailed = false;
             var search = [];
             for (var row = rowCounter; row !== rowCounter - searchSize; row--) {
                 search.push(graph[row][colLeftCount]);
